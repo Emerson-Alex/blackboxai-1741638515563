@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversa com a Companheira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#1a1a1a] text-gray-200 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="font-cinzel text-4xl text-amber-500 mb-2">Companheira Mística</h1>
+            <p class="font-cormorant text-lg text-amber-300/80">Uma jornada através da sabedoria ancestral</p>
+        </header>
+
+        <main class="flex flex-col md:flex-row gap-8">
+            <div class="companion-portrait md:w-1/3 flex flex-col items-center">
+                <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-amber-600/30 shadow-lg shadow-amber-900/20">
+                    <img src="https://images.pexels.com/photos/7794435/pexels-photo-7794435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Companheira" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="chat-container md:w-2/3 bg-black/40 rounded-lg p-4 border border-amber-900/30">
+                <div id="chat-messages" class="h-[400px] overflow-y-auto mb-4 p-4 space-y-4">
+                    <!-- Messages will be added here by JavaScript -->
+                </div>
+
+                <form id="chat-form" class="flex gap-2">
+                    <input type="text" 
+                           id="user-input" 
+                           class="flex-1 bg-gray-900 border border-amber-900/30 rounded px-4 py-2 focus:outline-none focus:border-amber-500 text-gray-200"
+                           placeholder="Digite sua mensagem..."
+                           autocomplete="off">
+                    <button type="submit" 
+                            class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-2 rounded transition-colors duration-200">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
